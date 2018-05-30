@@ -301,4 +301,4 @@ tu proyecto, teniendo en cuenta el desarrollo de tus _habilidades blandas_:
   saber administrarlo.
 * Trabaja en equipo, pregunta e intenta completar el proyecto sin rendirte.
 * Prepara tu presentación, si no logro comunicar mis ideas a los demás no se
-  podrá apreciar todo el esfuerzo y trabajo que invertiste.
+  podrá apreciar todo el esfuerzo y trabajo que invertiste.# proyectocifradooriginal
