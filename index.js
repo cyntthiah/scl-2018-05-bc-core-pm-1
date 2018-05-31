@@ -1,13 +1,14 @@
 function EncodeCaesar(texto, numero)
 {
     var cadena1 = texto.toUpperCase();
+    var offset= 33;
     var cadena2 = "";
     console.log(cadena1) 
     for(i=0; i < cadena1.length; i++)
     {
        
         var numero1 = cadena1.charCodeAt(i); 
-        if(numero1 == 32)
+        if(numero1 == 33)
          
         {
             cadena2 = cadena2 + String.fromCharCode(numero1);   
@@ -29,11 +30,12 @@ function DecodeCaesar(texto, numero)
 {
     var cadena1 = texto.toUpperCase();
     var cadena2 = "";
+    var offset = 33;
     console.log(cadena1);
     for(i=0; i<cadena1.length; i++)
     {
         var numero1 = cadena1.charCodeAt(i);
-        if(numero1 == 32)
+        if(numero1 == 33)
         {
             cadena2 = cadena2 + String.fromCharCode(numero1);
         }
@@ -57,14 +59,14 @@ function DecodeCaesar(texto, numero)
 function ClickEncode() 
 {
     var x = document.getElementById("TextoIngresado").value;
-    var y = EncodeCaesar(x, 4);
+    var y = EncodeCaesar(x, 33);
     document.getElementById("TextoResultado").value = y
 }
  
 function ClickDecode() 
 {
     var x =document.getElementById("TextoIngresado").value;
-    var y = DecodeCaesar(x, 4);
+    var y = DecodeCaesar(x, 33);
     document.getElementById("TextoResultado").value = y;
 }
  
