@@ -1,60 +1,50 @@
 window.cipher = {
-  encode: () => {
-    /* Acá va tu código */
-    function EncodeCaesar(texto, numero) {
-      var cadena1 = texto.toUpperCase();
-      var offset = 33;
-      var cadena2 = "";
-      console.log(cadena1) 
-      for (i = 0; i < cadena1.length; i++) {
-  
-          var numero1 = cadena1.charCodeAt(i); 
-          if (numero1 == 33) // 
-          {
-              cadena2 = cadena2 + String.fromCharCode(numero1);  
-          }
-          else {
-              var numero2 = ((numero1 - 65) + numero) % 26 + 65;  
-              console.log(numero1 + "-" + numero2); 
-              cadena2 = cadena2 + String.fromCharCode(numero2); 
-          }
-          console.log(cadena2); 
-      }
-  
-      console.log(cadena2) 
-      return cadena2;
-  }
-  },
-  decode: () => {
-    /* Acá va tu código */
-    function DecodeCaesar(texto, numero)
-{
-    var cadena1 = texto.toUpperCase();
-    var cadena2 = "";
-    var offset = 33;
-    console.log(cadena1);
-    for(i=0; i<cadena1.length; i++)
-    {
-        var numero1 = cadena1.charCodeAt(i);
-        if(numero1 == 33)
-        {
-            cadena2 = cadena2 + String.fromCharCode(numero1);
-        }
-        else
-        {
-            var numero3 = numero1 - 65 - numero;
-            if (numero3<0)
-            {
-                numero3 = (26+numero3);    
+    encode: (texto, numero) => {
+        /* Acá va tu código */
+            var string = texto.toUpperCase();
+            var offset = parseInt(numero);
+            var resultado = "";
+            console.log(string)
+            for (var i = 0; i < string.length; i++) {
+
+                var NumeroOriginal = string.charCodeAt(i);
+                if (NumeroOriginal == 32) {
+                    resultado = resultado + String.fromCharCode(NumeroOriginal);
+                }
+                else {
+                    var NumeroCodificado = ((NumeroOriginal - 65) + offset) % 26 + 65;
+                    console.log(NumeroOriginal + "-" + NumeroCodificado);
+                    resultado = resultado + String.fromCharCode(NumeroCodificado);
+                }
+                console.log(resultado);
             }
-            numero2 = numero3%26+65;
-            console.log(numero1+ "-"+ numero2);
-            cadena2 = cadena2 + String.fromCharCode(numero2);
+
+            console.log(resultado)
+            return resultado;
+        },
+
+    decode: (Texto, numero) => {
+        /* Acá va tu código */
+
+        var string = Texto.toUpperCase();
+        var offset = parseInt(numero);
+        var resultado = "";
+
+        console.log(string);
+        for (var i = 0; i < string.length; i++) {
+            var NumeroCodificado = string.charCodeAt(i);
+            if (NumeroCodificado == 32) {
+                resultado = resultado + String.fromCharCode(NumeroCodificado);
+            }
+            else {
+
+                var NumeroOriginal = (NumeroCodificado - offset + 65) % 26 + 65;
+                console.log(NumeroCodificado + "-" + NumeroOriginal);
+                resultado = resultado + String.fromCharCode(NumeroOriginal);
+            }
+
         }
-       
+        console.log(resultado);
+        return resultado;
     }
-    console.log(cadena2);
-    return cadena2;
-}
-  }
 }

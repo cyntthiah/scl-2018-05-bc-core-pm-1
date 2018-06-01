@@ -9,52 +9,51 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <nav class="navbar navbar-expand-md bg-dark navbar-light">
       <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <h1>Decifrador Cesar </h2>
+      <h1>Caesar Cipher</h1>
     </nav>
   </div>
-
-  </br>
-  <textarea id="espacios" rows="1"></textarea>
-  <div class="form-group container-fluid">
-    <label for="Peticion">Escriba su texto</label>
+    
+  <br>
+  
+  <div class="container">
+    <label for="Offset">Espacios a saltar</label>
+    <br>
+    <textarea id="espacios" rows="1"></textarea>
+    <br>
+    <label for="Peticion">Texto a Codificar</label>
     <br>
     <textarea id="TextoIngresado" rows="4"></textarea>
     <div>
-
-      <button id="Encode" class="btn btn-primary boton w3-border w3-hover-indigo" onclick="ClickEncode()">Codificar</button>
-      <button id="Decode" class="btn btn-primary boton w3-button w3-border w3-hover-indigo" onclick="ClickDecode()">Descifrar</button>
-      <button id="Limpiar" class="btn btn-danger boton w3-button w3-border w3-hover-indigo" onclick="ClickLimpiar()">Limpiar</button>
+      <button id="Encode" class="boton w3-border w3-hover-indigo" onclick="EncodeCaesar()">Codificar</button>
+      <button id="Decode" class="boton w3-button w3-border w3-hover-indigo" onclick="DecodeCaesar()">Descifrar</button>
+      <button id="Limpiar" class="boton w3-button w3-border w3-hover-indigo" onclick="ClickLimpiar()">Limpiar</button>
     </div>
     <br>
-    <label for="Resultado">Su resultado aqui:</label>
+    <label for="Resultado">Su texto Secreto:</label>
     <br>
     <textarea name="" id="TextoResultado" rows="4"></textarea>
-
+    
     <br>
     <br>
-    <div>
-
-
-    </div>
+    <div></div>
   </div>
-
+  
   <footer>
     <p>creado por: Cynthia Rojas</p>
     <p>Contacto :cyntthiah@gmail.com</p>
     <p>
-      <strong>Note:</strong>Esta version de cifrado no permite emojis</p>
+      <strong>Note:</strong>Esta version de cifrado no permite emojis
+    </p>
   </footer>
-
-</body>
-
-<div id="root"></div>
-
-<script src="cipher.js"></script>
-<script src="index.js"></script>
+  
+  <div id="root"></div>
+  
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
